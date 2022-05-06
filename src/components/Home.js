@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { actionCreators } from "../routes/store.js";
+import { add } from "../routes/store.js";
 import ToDo from "./ToDo.js";
 
 function Home({ toDos, addToDo }) {
@@ -42,7 +42,7 @@ function mapStateToProps(state) {
 // addToDo 함수가 실행되면 dispatch를 호출
 function mapDispatchToProps(dispatch) {
   return {
-    addToDo: (text) => dispatch(actionCreators.addToDo(text)),
+    addToDo: (text) => dispatch(add(text)),
   };
 }
 
